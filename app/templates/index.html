@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Chatbot Developer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Mini Chatbot Developer</h1>
+
+    <form action="/generate" method="post">
+        <label for="url">Enter URL:</label>
+        <input type="url" id="url" name="url" required>
+        <button type="submit">Generate Chatbot</button>
+    </form>
+
+    <div id="chatbot-container">
+        <h2>Generated Chatbot</h2>
+        <div id="chatbot"></div>
+    </div>
+
+    <div id="code-container">
+        <h2>Generated Code</h2>
+        <pre><code id="code"></code></pre>
+        <button id="export-flask">Export Flask Code</button>
+        <button id="export-streamlit">Export Streamlit Code</button>
+        <a href="https://heroku.com/deploy?template=https://github.com/your-username/your-repo-name" target="_blank">
+            <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku">
+        </a>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

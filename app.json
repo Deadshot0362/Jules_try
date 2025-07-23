@@ -1,0 +1,23 @@
+{
+  "name": "Mini Chatbot Developer",
+  "description": "A simple app to generate a chatbot from a URL.",
+  "repository": "https://github.com/your-username/your-repo-name",
+  "logo": "https://i.imgur.com/qgA41aI.png",
+  "keywords": ["python", "flask", "chatbot"],
+  "scripts": {
+    "postdeploy": "python app/main.py"
+  },
+  "env": {
+    "FLASK_APP": {
+      "description": "The Flask app to run.",
+      "value": "app.main:app"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": []
+}
